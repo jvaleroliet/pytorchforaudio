@@ -33,8 +33,7 @@ class FeedForwardNet(nn.Module):
 
     def forward(self, input_data):
         x = self.flatten(input_data)
-        logits = self.dense_layers(x)
-        predictions = self.softmax(logits)
+        predictions = self.dense_layers(x)
         return predictions
 
 
